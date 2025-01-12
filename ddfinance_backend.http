@@ -1,0 +1,6 @@
+@ddfinance_backend_HostAddress = http://localhost:5208
+
+GET {{ddfinance_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4YbvUFxyJKdVpgzbRLvO74vM8cBhhZUKvFPKGOIHuEI=",
+  "Source": "ddfinance_backend",
+  "BasePath": "_content/ddfinance_backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
