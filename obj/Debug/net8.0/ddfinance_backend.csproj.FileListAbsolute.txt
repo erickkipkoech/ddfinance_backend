@@ -136,3 +136,4 @@
 /home/erick/Documents/DDFinanceBackend/obj/Debug/net8.0/ddfinance_backend.pdb
 /home/erick/Documents/DDFinanceBackend/obj/Debug/net8.0/ddfinance_backend.genruntimeconfig.cache
 /home/erick/Documents/DDFinanceBackend/obj/Debug/net8.0/ref/ddfinance_backend.dll
+/home/erick/Documents/DDFinanceBackend/obj/Debug/net8.0/ddfinance_backend.sourcelink.json
