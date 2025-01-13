@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <ContainerImageName>products-crud-api</ContainerImageName>
+    <ContainerImageName>insurances-crud-api</ContainerImageName>
     <ContainerImageTags>latest</ContainerImageTags>
     <PublishProfile>DefaultContainer</PublishProfile>
     <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
