@@ -17,4 +17,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <ContainerImageName>products-crud-api</ContainerImageName>
+    <ContainerImageTags>latest</ContainerImageTags>
+    <PublishProfile>DefaultContainer</PublishProfile>
+    <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
 </Project>
