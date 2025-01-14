@@ -16,15 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var assemblyName = typeof(Program).Assembly.GetName().Name;
-var connectionString = builder.Configuration.GetConnectionString("PostgresConnection");
-
-builder.Services.AddDbContext<AppDbContext>(c => c.UseNpgsql(connectionString, m => m.MigrationsAssembly(assemblyName)));
-
-
-
-// builder.Services.AddDbContext<AppDbContext>(options =>
-//     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 builder.Services.AddScoped<IInsurancePolicies, InsurancePoliciesRepository>();
 
@@ -36,13 +29,6 @@ builder.Services.AddScoped<IValidator<GetInsurancePoliciesByIdRequest>, GetInsur
 builder.Services.AddScoped<IValidator<DeleteInsurancePoliciesRequest>, DeleteInsurancePoliciesRequestValidation>();
 
 var app = builder.Build();
-
-using var scope = app.Services.CreateScope();
-var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-if (context.Database.GetPendingMigrations().Any())
-{
-    await context.Database.MigrateAsync();
-}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
