@@ -25,3 +25,6 @@ services:
 
 volumes:
   postgres-data:
+
+
+https://codewithmukesh.com/blog/hosting-aspnet-core-webapi-on-amazon-ec2/
