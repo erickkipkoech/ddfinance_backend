@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/ddfinance_backend.props" />
+</Project>
