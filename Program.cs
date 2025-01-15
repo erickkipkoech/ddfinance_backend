@@ -1,11 +1,9 @@
-using System.Net;
 using DDFinanceBackend.Data;
 using DDFinanceBackend.Models.Requests;
 using DDFinanceBackend.Repository;
 using DDFinanceBackend.Validation;
 using FluentValidation;
 using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,7 +31,6 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseCors();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
