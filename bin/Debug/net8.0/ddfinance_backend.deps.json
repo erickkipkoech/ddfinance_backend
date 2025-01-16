@@ -11,6 +11,7 @@
           "FluentValidation.AspNetCore": "11.3.0",
           "Microsoft.AspNetCore.OpenApi": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.0",
+          "Microsoft.NET.Build.Containers": "8.0.110",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.2",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
@@ -405,6 +406,7 @@
         }
       },
       "Microsoft.Extensions.Primitives/8.0.0": {},
+      "Microsoft.NET.Build.Containers/8.0.110": {},
       "Microsoft.OpenApi/1.6.14": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -775,6 +777,13 @@
       "sha512": "sha512-bXJEZrW9ny8vjMF1JV253WeLhpEVzFo1lyaZu1vQ4ZxWUlVvknZ/+ftFgVheLubb4eZPSwwxBeqS1JkCOjxd8g==",
       "path": "microsoft.extensions.primitives/8.0.0",
       "hashPath": "microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.NET.Build.Containers/8.0.110": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VFNTooPxYRr2ntfY3KaOGKwhS7AXRrwPY1OEZBJXHR9g8r7ENWVAuGGJjyJKZWip0CaJcigX75P/j91hW8dtwQ==",
+      "path": "microsoft.net.build.containers/8.0.110",
+      "hashPath": "microsoft.net.build.containers.8.0.110.nupkg.sha512"
     },
     "Microsoft.OpenApi/1.6.14": {
       "type": "package",
