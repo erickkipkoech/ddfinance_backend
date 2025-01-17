@@ -2,6 +2,6 @@ namespace DDFinanceBackend.Models.Requests
 {
     public class DeleteInsurancePoliciesRequest
     {
-        public int PolicyId { get; set; }
+        public List<int> PolicyIds { get; set; }
     }
 }

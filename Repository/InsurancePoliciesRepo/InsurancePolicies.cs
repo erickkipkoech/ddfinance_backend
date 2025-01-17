@@ -59,14 +59,20 @@ namespace DDFinanceBackend.Repository
 
         public async Task<bool> DeleteInsurancePoliciesAsync(DeleteInsurancePoliciesRequest request, CancellationToken cancellationToken)
         {
-            var policy = await _context.InsurancePolicies.FindAsync(request.PolicyId);
-            Console.WriteLine(policy);
-            if (policy == null)
+            if (request?.PolicyIds == null || !request.PolicyIds.Any())
+            {
+                return false;
+            }
+            var policiesToDelete = await _context.InsurancePolicies
+                                        .Where(policy => request.PolicyIds.Contains(policy.PolicyId))
+                                        .ToListAsync(cancellationToken);
+            // Console.WriteLine(policy);
+            if (!policiesToDelete.Any())
             {
                 return false;
             }
 
-            _context.InsurancePolicies.Remove(policy);
+            _context.InsurancePolicies.RemoveRange(policiesToDelete);
             await _context.SaveChangesAsync(cancellationToken);
             return true;
         }

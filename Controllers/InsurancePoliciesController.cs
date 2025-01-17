@@ -27,15 +27,15 @@ namespace DDFinanceBackend.Controllers
         [HttpGet("GetInsurancePoliciesById/{PolicyId}")]
         public async Task<ActionResult<InsurancePolicies>> GetInsurancePoliciesById([FromRoute] GetInsurancePoliciesByIdRequest request)
         {
-             MainResponse<InsurancePolicies> response;
+            MainResponse<InsurancePolicies> response;
             var policy = await _repository.GetInsurancePoliciesByIdAsync(request);
             if (policy == null)
             {
-                 response = new MainResponse<InsurancePolicies>(null, "Policy not found.");
+                response = new MainResponse<InsurancePolicies>(null, "Policy not found.");
                 return NotFound(response);
             }
 
-             response = new MainResponse<InsurancePolicies>(policy);
+            response = new MainResponse<InsurancePolicies>(policy);
             return Ok(response);
         }
 
@@ -73,6 +73,11 @@ namespace DDFinanceBackend.Controllers
         public async Task<IActionResult> DeleteInsurancePolicies(DeleteInsurancePoliciesRequest request, CancellationToken cancellationToken)
         {
             MainResponse<InsurancePolicies> response;
+            if (request?.PolicyIds == null || !request.PolicyIds.Any())
+            {
+                response = new MainResponse<InsurancePolicies>(null, "No policy IDs provided.");
+                return BadRequest(response);
+            }
             var success = await _repository.DeleteInsurancePoliciesAsync(request, cancellationToken);
             if (!success)
             {
