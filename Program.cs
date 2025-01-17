@@ -14,11 +14,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var assemblyName = typeof(Program).Assembly.GetName().Name;
+ var assemblyName = typeof(Program).Assembly.GetName().Name;
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection"),m => m.MigrationsAssembly(assemblyName)));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection") ,m => m.MigrationsAssembly(assemblyName)
+    ));
 
 builder.Services.AddScoped<IInsurancePolicies, InsurancePoliciesRepository>();
 
@@ -41,6 +42,11 @@ if (context.Database.GetPendingMigrations().Any())
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseCors(policy =>
+    policy.WithOrigins("http://localhost:4200")
+          .AllowAnyHeader()
+          .AllowAnyMethod());
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }

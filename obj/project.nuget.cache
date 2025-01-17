@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hNiGaCQS3c0=",
+  "dgSpecHash": "BA3B3PJAohI=",
   "success": true,
   "projectFilePath": "C:\\Users\\erick.kipkoech\\source\\repos\\ddfinance_backend\\ddfinance_backend.csproj",
   "expectedPackageFiles": [
@@ -55,8 +55,6 @@
     "C:\\Users\\erick.kipkoech\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\erick.kipkoech\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\erick.kipkoech\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
-    "C:\\Users\\erick.kipkoech\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\8.0.8\\microsoft.netcore.app.runtime.linux-x64.8.0.8.nupkg.sha512",
-    "C:\\Users\\erick.kipkoech\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\8.0.8\\microsoft.aspnetcore.app.runtime.linux-x64.8.0.8.nupkg.sha512",
     "C:\\Users\\erick.kipkoech\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.8\\microsoft.netcore.app.host.linux-x64.8.0.8.nupkg.sha512"
   ],
   "logs": []
