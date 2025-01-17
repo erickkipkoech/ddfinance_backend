@@ -7,8 +7,10 @@ namespace DDFinanceBackend.Validation
     {
         public DeleteInsurancePoliciesRequestValidation()
         {
-            RuleFor(r => r.PolicyId)
-                .GreaterThan(0).WithMessage("Policy ID must be greater than 0.");
+            RuleFor(x => x.PolicyIds)
+               .NotNull().WithMessage("PolicyIds cannot be null")
+               .NotEmpty().WithMessage("At least one PolicyId is required")
+               .Must(policyIds => policyIds.All(id => id > 0)).WithMessage("Each PolicyId must be greater than 0");
         }
     }
 }
