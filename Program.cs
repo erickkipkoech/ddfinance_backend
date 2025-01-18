@@ -42,6 +42,10 @@ if (context.Database.GetPendingMigrations().Any())
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+     app.UseCors(policy =>
+    policy.WithOrigins("http://localhost:4200")
+          .AllowAnyHeader()
+          .AllowAnyMethod());
     app.UseSwagger();
     app.UseSwaggerUI();
 }
