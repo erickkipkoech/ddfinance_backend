@@ -47,7 +47,7 @@ namespace DDFinanceBackend.Repository
 
             if (existingPolicy == null)
                 return null;
-
+            existingPolicy.PolicyName = request.PolicyName;
             existingPolicy.PremiumAmount = request.PremiumAmount;
             existingPolicy.PolicyType = request.PolicyType;
             existingPolicy.StartDate = request.StartDate;
