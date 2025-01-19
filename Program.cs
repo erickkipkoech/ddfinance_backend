@@ -47,7 +47,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(policy =>
-  policy.WithOrigins("http://localhost:4200")
+  policy.WithOrigins("http://localhost:4200",
+                    "http://3.91.52.189",
+                    "http://ec2-3-91-52-189.compute-1.amazonaws.com")
         .AllowAnyHeader()
         .AllowAnyMethod());
 
