@@ -3946,24 +3946,27 @@
     ]
   },
   "packageFolders": {
-    "/home/erick/.nuget/packages/": {}
+    "C:\\Users\\erick.kipkoech\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/erick/Documents/DDFinanceBackend/ddfinance_backend.csproj",
+      "projectUniqueName": "C:\\Users\\erick.kipkoech\\source\\repos\\ddfinance_backend\\ddfinance_backend.csproj",
       "projectName": "ddfinance_backend",
-      "projectPath": "/home/erick/Documents/DDFinanceBackend/ddfinance_backend.csproj",
-      "packagesPath": "/home/erick/.nuget/packages/",
-      "outputPath": "/home/erick/Documents/DDFinanceBackend/obj/",
+      "projectPath": "C:\\Users\\erick.kipkoech\\source\\repos\\ddfinance_backend\\ddfinance_backend.csproj",
+      "packagesPath": "C:\\Users\\erick.kipkoech\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\erick.kipkoech\\source\\repos\\ddfinance_backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/erick/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\erick.kipkoech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3976,6 +3979,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4023,7 +4031,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.10, 8.0.10]"
+            "version": "[8.0.8, 8.0.8]"
           }
         ],
         "frameworkReferences": {
@@ -4034,7 +4042,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
